@@ -2,6 +2,11 @@ body{
     background: #f9f7fe;
     font-family: "Roboto", sans-serif;
 }
+h1{
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
 .app-container{
     background: white;
     padding: 30px;
@@ -31,7 +36,7 @@ footer{
     padding: 20px 15px;
     border-radius: 6px;
     font-size: 17px;
-    background-color: rgba(0, 0, 255, 0.822);
+    background-color: rgba(0, 0, 255, 0.7);
     border: none;
     color: white;
     margin-left: 5px;
@@ -41,4 +46,35 @@ footer{
     cursor: pointer;
     opacity: 0.8;
     color:white;
+}
+p{
+    font-size: 17px;
+    line-height: 25px;
+    color: rgba(0,0,0, 0.5);
+
+}
+.weather-details strong{
+    color: #f65282;
+}
+.weather-full-details{
+    display: flex;
+    justify-content: space-between;
+}
+.current-temperature{
+    margin-top: 32px;
+}
+.current-temperature-value{
+    font-size: 90px;
+    font-weight: bolder;
+}
+.current-temperature-icon{
+    font-size: 45px;
+    position: relative;
+    top: -8px;
+    margin-right: 3px;
+}
+.current-temperature-unit{
+    font-size: 30px;
+    position: relative;
+    top: -43px;
 }

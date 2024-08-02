@@ -14,4 +14,31 @@ footer{
     font-size: 14px;
     color: rgba(0,0,0, 0.5);
     text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #f9f7fe;
+}
+.search-input{
+    padding: 20px 15px;
+    border-radius: 8px;
+    border: none;
+    background: #f9f7fe;
+    font-size: 17px;
+    width: 78%;
+    box-shadow: 2px 4px 3px rgba(65, 50, 100, 0.08);
+   
+}
+.search-button{
+    padding: 20px 15px;
+    border-radius: 6px;
+    font-size: 17px;
+    background-color: rgba(0, 0, 255, 0.822);
+    border: none;
+    color: white;
+    margin-left: 5px;
+    width: 16%;
+}
+.search-button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    color:white;
 }

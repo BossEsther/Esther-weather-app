@@ -9,25 +9,30 @@
     
 </head>
 <body>
-        This project was coded by <a href="https://github.com/BossEsther" target="_blank">Esther</a>,open sourced on <a href="#" target="_blank">Github</a> and hosted on <a href="#" target="_blank">Render</a> 
   <div class="app-container">
     <header>
-      <form>
-          <input type="search" placeholder="Enter a city..." required />
-          <input type="submit" value="Search" required />
+      <form id="search-form">
+          <input type="search" placeholder="Enter a city..." required class="search-input" id="search-input"/>
+          <input type="submit" value="Search" required class="search-button"/>
       </form>
     </header>
     <main>
-        <h1>Nigeria</h1>
-        <p>
-          Friday 09:02, moderate rain <br/>
-          Humidity: 87%, Wind: 7.2km/h
-        </p>
-          <div>☀️12°C</div>
+      <div class="weather-full-details">
+        <div>
+          <h1 id="current-city">Nigeria</h1>
+          <p class="weather-details">
+            <span id="current-time"></span>, moderate rain <br/>
+            Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+          </p>
+        </div>
+          <div class="current-temperature"><span class="current-temperature-icon">☀️</span><span class="current-temperature-value">12</span><span class="current-temperature-unit">°C</span></div>
+      </div>
+
     </main>
         <footer>
           This project was coded by <a href="https://github.com/BossEsther" target="_blank">Esther</a>,open sourced on <a href="#" target="_blank">Github</a> and hosted on <a href="#" target="_blank">Render</a> 
         </footer>
   </div>
+  <script src="src/index.js"></script>
 </body>
 </html>

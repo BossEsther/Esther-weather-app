@@ -1,14 +1,23 @@
+function displayTemperature(response){
+    console.log(response.data)
+    let temperature = Math.round(response.data.temperature.current);
+    let temperatureElement = document.querySelector("#current-temperature-value");
+    let cityElement = document.querySelector("#current-city");
+    temperatureElement.innerHTML = temperature;
+    cityElement.innerHTML = response.data.city;
+    
+}
 
 function citySearch(city){
     let apiKey = `to4b1410aa2839a0042157f44d3803ee`;
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+
+    axios.get(apiUrl).then(displayTemperature);
 }
 
 function searchCity(event){
     event.preventDefault();
     let searchInputElement = document.querySelector("#search-input");
-    let city = document.querySelector("#current-city");
-    city.innerHTML = searchInputElement.value;
 
     citySearch(searchInputElement.value);
     
@@ -38,3 +47,5 @@ let currentDateElement = document.querySelector("#current-time");
 let currentDate = new Date();
 
 currentDateElement.innerHTML = formattedDate(currentDate);
+
+citySearch("Lagos");

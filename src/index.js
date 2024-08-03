@@ -3,8 +3,18 @@ function displayTemperature(response){
     let temperature = Math.round(response.data.temperature.current);
     let temperatureElement = document.querySelector("#current-temperature-value");
     let cityElement = document.querySelector("#current-city");
+    let windElement = document.querySelector("#wind-speed");
+    let humidityElement = document.querySelector("#humidity-percentage");
+    let descriptionElement = document.querySelector("#description-details");
+    let currentDateElement = document.querySelector("#current-time");
+    let dateElement = new Date(response.data.time * 1000);
+
     temperatureElement.innerHTML = temperature;
     cityElement.innerHTML = response.data.city;
+    windElement.innerHTML = `${response.data.wind.speed}km/h`;
+    humidityElement.innerHTML= `${response.data.temperature.humidity}%`;
+    descriptionElement.innerHTML= response.data.condition.description;   
+    currentDateElement.innerHTML = formattedDate(currentDate);
     
 }
 
@@ -42,10 +52,5 @@ function formattedDate(date){
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit",searchCity);
-
-let currentDateElement = document.querySelector("#current-time");
-let currentDate = new Date();
-
-currentDateElement.innerHTML = formattedDate(currentDate);
 
 citySearch("Lagos");

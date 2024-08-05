@@ -19,6 +19,7 @@ function displayTemperature(response){
     currentDateElement.innerHTML = formatDate(date);
     iconElement.innerHTML = `<img  src="${response.data.condition.icon_url}" class="current-temperature-icon" />`;
     
+    getForecast(response.data.city);
     
 }
 function formatDate(date){
@@ -53,7 +54,14 @@ function searchCity(event){
     citySearch(searchInputElement.value);
     
 }
-function displayForecast(){
+function getForecast(city){
+    let apiKey = `to4b1410aa2839a0042157f44d3803ee`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+    
+    axios.get(apiUrl).then(displayForecast);
+
+}
+function displayForecast(response){
     
     let days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
     let forecastHtml = "";
@@ -81,5 +89,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit",searchCity);
 
 citySearch("Lagos");
-
-displayForecast();

@@ -99,20 +99,20 @@ main{
     color: #f65282;
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 5px;
    
 }
 .weather-forecast-date{
     text-align: center;
     color: rgba(0,0,0, 0.5);
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .weather-forecast-icon{
     display: block;
     margin: 0 auto;
-    width: 80x;
-    height: 80px;
-    margin-top: 15px;
+    width: 75x;
+    height: 75px;
+    margin-top: 5px;
 }
 .weather-forecast-temperature{
     margin: 0 5px;
@@ -123,8 +123,10 @@ main{
     justify-content: space-around;
 }
 .weather-forecast-day{
-    background: rgba(210, 210, 223, 0.7);
+    background: rgba(210, 210, 223, 0.3);
     border-radius: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
     
 
 }
